@@ -9,6 +9,6 @@
 - HTML
 - CSS
 - JS (On the front)
-- Github Actions (To deploy & github pages)
+- Github Actions (By jelly-actions, to deploy & render github pages)
 
 
