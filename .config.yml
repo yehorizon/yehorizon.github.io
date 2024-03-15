@@ -1,7 +1,30 @@
-highlighter: rouge
+
+
+title: "Wabi blog"
+author: "Yehorizon"
+description: "It starts with the first step. " # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+
+github_username: "yehorizon"
+
+theme: "minima"
+
+rss: rss
+
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+    
 plugins:
   - jekyll-feed
-title: Code evangelist  
-description: It starts with the first step 
-author: Yehorizon 
-permalink: /:year/:month/:day/:title:output_ext
+  - jekyll-sitemap
+
+titles_from_headings:
+  strip_title: true
+  collections: true
+
+defaults:
+  - scope:
+      path: ""
+      type: post
+    values:
+      tags: Other
