@@ -19,5 +19,6 @@ Own defined css for better representation.
 - By jekyll-actions
 To deploy & render github pages
 
+#### Updater 
 
-
+Script for reading _posts folder, and writing into it git's subfolder  
