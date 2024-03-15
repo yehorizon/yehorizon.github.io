@@ -1,3 +1,6 @@
 [submodule "Notes"]
 	path = Notes
 	url = https://github.com/yehorizon/Notes
+[submodule "_posts"]
+	path = _posts
+	url = https://github.com/yehorizon/Notes
