@@ -8,13 +8,13 @@
 <header class="page-header">
   <!-- Avatar -->
   {%- if site.gravatar_hash -%}
-    <img src="https://avatars.githubusercontent.com/u/75030577?v=4" alt="Avatar" class="avatar no-print" itemprop="image">
+    <img src="" alt="my photo" class="avatar no-print" itemprop="image">
   {%- endif -%}
   <!-- Name and Suffix -->
   <div class="header-title">
     <span class="header-name" itemprop="name">{{ resume.header.name }}</span>
-    {%- if resume.header.suffix -%}
-      <span class="header-suffix">, {{ resume.header.suffix }}</span>
+    {%- if resume.header.nicks -%}
+      <span class="header-suffix">, {{ resume.header.nicks }}</span>
     {%- endif -%}
   </div>
   <!-- Title and social icon links -->
@@ -38,76 +38,6 @@
 </header>
 
 
-{%- if resume.sections.experience -%}
-  <section class="content-section">
-    <header class="section-header"><h2>Experience</h2></header>
-    <div class="section-content">
-    {%- for job in site.data.experience -%}
-      {%- assign positions = job.positions | sort_natural: "startdate" | reverse -%}
-
-      {%- if positions.size > 1 -%}
-        {%- assign jobfirstpos = positions | last -%}
-        {%- assign joblastpos = positions | first -%}
-
-        {%- assign jobStartDate = jobfirstpos.startdate | date: "%F" -%}
-        {%- assign jobEndDate = joblastpos.enddate | default: 'now' | date: "%F" -%}
-      {%- endif -%}
-
-      <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-        <img src="{{ job.logo }}" class="company-logo">
-
-        <h3 class="resume-item-title company-name" itemprop="name" >
-          {%- if job.url -%}<a href="{{ job.url }}" itemprop="url" target="_blank">{{ job.company }}</a>{%- else -%}{{ job.company }}{%- endif -%}
-        </h3>
-
-        {%- if positions.size > 1 -%}
-          <div class="company-duration">
-            <span>{{ jobfirstpos.startdate | date: "%b, %Y" }}</span>
-            <span> &ndash; </span>
-            <span>{{ joblastpos.enddate | date: "%b, %Y" | default: "Present" }}</span>
-            <span> &bull; </span>
-            <span><script>JobDateDiff("{{ jobStartDate }}","{{ jobEndDate }}")</script></span>
-          </div>
-        {%- endif -%}
-
-        {%- if job.summary -%}
-          <div class="job-summary">
-            {{ job.summary }}
-          </div>
-        {%- endif -%}
-
-        {%- for position in positions -%}
-          {%- assign posStartDate = position.startdate | date: "%F" -%}
-          {%- assign posEndDate = position.enddate | default: 'now' | date: "%F" -%}
-
-          <div class="resume-job-position">
-            <div class="position-title">
-              <h4 class="resume-item-details" itemprop="description">{{position.title }}</h4>
-              <div class="position-duration">
-                <span> &bull; </span>
-                <span>{{ position.startdate | date: "%b, %Y" }}</span>
-                <span> &ndash; </span>
-                <span>{{ position.enddate | date: "%b, %Y" | default: "Present" }}</span>
-                <span> &bull; </span>
-                <span><script>JobDateDiff("{{ posStartDate }}","{{ posEndDate }}")</script></span>
-              </div>
-            </div>
-            <div class="resume-item-copy">
-              <div class="position-summary">{{ position.summary }}</div>
-              {%- if position.projects -%}
-                <ul class="resume-item-list">
-                  {%- for project in position.projects -%}<li>{{ project }}</li>{%- endfor -%}
-                </ul>
-              {%- endif -%}
-            </div>
-          </div>
-        {%- endfor -%}
-      </div>
-    {%- endfor -%}
-    </div>
-  </section>
-{%- endif -%}
-
 {%- if resume.sections.recognition -%}
   <section class="content-section">
     <header class="section-header"><h2>Recognition</h2></header>
@@ -117,23 +47,6 @@
         <h3 class="resume-item-title" itemprop="award">{{ recognition.award }}</h3>
         <h4 class="resume-item-details">{{ recognition.organization }} &bull; {{ recognition.year }}</h4>
         <div class="resume-item-copy">{{ recognition.summary }}</div>
-      </div>
-    {%- endfor -%}
-    </div>
-  </section>
-{%- endif -%}
-
-
-{%- if resume.sections.projects -%}
-  <section class="content-section">
-    <header class="section-header"><h2>Personal Projects</h2></header>
-    <div class="section-content">
-    {%- for project in site.data.projects -%}
-      <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-        <meta itemprop="creator" content="{{ site.author }}" itemtype="http://schema.org/Person" />
-        <h3 class="resume-item-title" itemprop="name">{%- if project.url -%}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{%- else -%}{{ project.project }}{%- endif -%}</h3>
-        <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
-        <div class="resume-item-copy">{{ project.description }}</div>
       </div>
     {%- endfor -%}
     </div>

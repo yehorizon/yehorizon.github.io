@@ -3,14 +3,12 @@ header:
   name: Yehor 
   display_contact_info: true
   current_title: Lil-hacker, CS Enjoyer 
+  nicks: Cate Francisco, Yehorizon
   intro: >
 contact:
   telegram: yehorizon
 sections:
   experience:   true
-  education:    true
-  projects:     true
-  skills:       true
   recognition:  false 
   associations: false
   interests:    true
