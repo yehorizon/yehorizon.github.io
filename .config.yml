@@ -1,10 +1,12 @@
+
+theme: "minima"
+
 title: "Wabi blog"
 author: "Yehorizon"
-description: "It starts with the first step. " # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+description: "It starts with the first step. " 
 
 github_username: "yehorizon"
 
-theme: "minima"
 
 rss: rss
 
