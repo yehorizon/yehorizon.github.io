@@ -1,9 +1,0 @@
-
-- company: "Test "
-  summary: "Summary"
-  url: "google.com"
-  positions:
-  - title: "Data Engineer III"
-    startdate: 2022-05-23
-    summary:
-    projects:
