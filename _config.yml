@@ -4,6 +4,7 @@ theme: "minima"
 title: "Wabi blog"
 author: "Yehorizon"
 description: "It starts with the first step. " 
+url: http://yehorizon.github.io
 
 github_username: "yehorizon"
 
@@ -32,7 +33,7 @@ titles_from_headings:
 defaults:
   - scope:
       path: ""
-      type: post
+      type: posts
     values:
       tags: Other
 
