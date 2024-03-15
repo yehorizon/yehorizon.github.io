@@ -22,6 +22,8 @@ kramdown:
   syntax_highlighter_opts:
     disable: true
     
+remote_theme: jekyll/minima
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -38,5 +40,6 @@ defaults:
       tags: Other
 
 header_pages:
-  - about.html
-  - posts.html
+  - about.md
+  - posts.md
+  - 
