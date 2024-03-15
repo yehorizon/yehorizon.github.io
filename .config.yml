@@ -1,0 +1,7 @@
+highlighter: rouge
+plugins:
+  - jekyll-feed
+title: Code evangelist  
+description: It starts with the first step 
+author: Yehorizon 
+permalink: /:year/:month/:day/:title:output_ext
