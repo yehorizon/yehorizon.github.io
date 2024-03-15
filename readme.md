@@ -3,12 +3,21 @@
 
 ** Frontend to my thoughts and posts **
 
-## Stack 
+## Stuff
 
-- Jelly (Ruby)
-- HTML
-- CSS
-- JS (On the front)
-- Github Actions (By jelly-actions, to deploy & render github pages)
+#### Notes (Just a markdown)
+#### Jekyll (Ruby)
+#### HTML + CSS
+- <del> Table of Content </del>
+- Minima theme
+Own defined css for better representation.
+#### JS (On the front)
+- Highlightjs 
+- Copy code
+- Gifffer
+#### Github Actions 
+- By jekyll-actions
+To deploy & render github pages
+
 
 
