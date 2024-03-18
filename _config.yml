@@ -1,9 +1,9 @@
 
 theme: "minima"
 
-title: "Cate's archive"
+title: "Cherdak"
 author: "Cate Francisco De Murrito"
-description: "It starts with the first step. " 
+description: "It starts with the first step." 
 url: http://yehorizon.github.io
 
 github_username: "yehorizon"
@@ -42,3 +42,4 @@ defaults:
 header_pages:
   - about.md
   - posts.md
+  - works.md
