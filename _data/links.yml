@@ -12,3 +12,7 @@
 
 - name: Quora 
 
+- name: CV 
+  url: https://github.com/yehorizon/myresumecv/files/14628847/resume_cv.pdf
+  label: download 
+
